@@ -41,7 +41,7 @@ cd tcp-client-with-retry/bin
 
 TCP server has ability to convert accepted words to uppercase and send back.
 
-## How to build the server.
+### How to build the server.
 
 Prepare the server.
 
@@ -59,7 +59,7 @@ cd tcp_server/bin/
 ocamlfind ocamlopt -package unix -linkpkg -thread main.ml -o server
 ```
 
-## How to run the server.
+### How to run the server.
 
 When using dune for build:
 
