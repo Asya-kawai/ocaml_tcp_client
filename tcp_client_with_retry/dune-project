@@ -1,0 +1,26 @@
+(lang dune 3.6)
+
+(name tcp_client_with_retry)
+
+(generate_opam_files true)
+
+(source
+ (github Asya-kawai/ocaml_tcp_client))
+
+(authors "Toshiki Kawai")
+
+(maintainers "Toshiki Kawai")
+
+(license LICENSE)
+
+(documentation https://github.com/Asya-kawai/ocaml_tcp_client/wiki)
+
+(package
+ (name tcp_client_with_retry)
+ (synopsis "TCP client with retry")
+ (description "A TCP client that retry if a request is not sent for some reason.")
+ (depends ocaml dune)
+ (tags
+  ("tcp" "tcp-client" "client")))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project

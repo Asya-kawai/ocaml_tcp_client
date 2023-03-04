@@ -1,0 +1,4 @@
+(executable
+ (public_name tcp_server)
+ (name main)
+ (libraries unix tcp_server))

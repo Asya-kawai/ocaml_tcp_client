@@ -1,80 +1,64 @@
 # ocaml_tcp_client
 
-Sample program for TCP clients written by OCaml.
+Sample programs for TCP clients written by OCaml.
 
-## tcp-client-with-retry
+## tcp_client_with_retry.
 
 TCP client has ability of re-send data to the server.
 
-### How to build
+### How to build the client.
+
+When using dune:
 
 ```
-cd tcp-client-with-retry/
-ocamlfind ocamlopt -package unix -linkpkg -thread client.ml -o client
+cd tcp_client_with_retry/
+dune build bin/main.exe
+```
+Or in manually:
+
+```
+cd tcp_client_with_retry/bin/
+ocamlfind ocamlopt -package unix -linkpkg -thread main.ml -o client
 ```
 
-### How to run
+### How to build the server.
 
 Prepare the server.
+
+When using dune:
+
 ```
-cd uppercase-server/
-ocamlfind ocamlopt -package unix -linkpkg -thread server.ml -o server
+cd tcp_server/
+dune build bin/main.exe
 ```
 
-Run the server.
+Or in manually:
+
 ```
-./server 'server-name' 'port'
+cd tcp_server/bin/
+ocamlfind ocamlopt -package unix -linkpkg -thread main.ml -o server
 ```
 
-Example:
+### How to run the server.
+
+When using dune for build:
+
 ```
+cd tcp_server
+dune exec bin/main.exe 8080
+```
+
+or when manually biuld:
+
+```
+cd tcp_server/bin/
 ./server localhost 8080
 ```
 
-Run the client.
+### How to run the client.
+
 ```
 cd tcp-client-with-retry/
-./client 'server-name' 'port'
-```
-
-Example:
-
-```
-./client localhost 8080
-```
-
-## tcp-client-with-timeout
-
-TCP client has ability of timeout when sending data to the server.
-
-### How to build
-
-```
-cd tcp-client-with-timeout
-ocamlfind ocamlopt -package unix -linkpkg -thread client.ml -o client
-```
-
-### How to run
-
-Prepare the server.
-```
-cd uppercase-server/
-ocamlfind ocamlopt -package unix -linkpkg -thread server.ml -o server
-```
-
-Run the server.
-```
-./server 'server-name' 'port'
-```
-
-Example:
-```
-./server localhost 8080
-```
-
-Run the client.
-```
-cd tcp-client-with-timeout
 ./client 'server-name' 'port'
 ```
 

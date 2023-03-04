@@ -1,0 +1,26 @@
+(lang dune 3.6)
+
+(name tcp_server)
+
+(generate_opam_files true)
+
+(source
+ (github Asya-kawai/ocaml_tcp_client))
+
+(authors "Toshiki Kawai")
+
+(maintainers "Toshiki Kawai")
+
+(license LICENSE)
+
+(documentation https://github.com/Asya-kawai/ocaml_tcp_client/wiki)
+
+(package
+ (name tcp_server)
+ (synopsis "TCP server")
+ (description "A TCP server.")
+ (depends ocaml dune)
+ (tags
+  ("tcp" "tcp-server" "server")))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project

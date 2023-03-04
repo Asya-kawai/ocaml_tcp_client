@@ -1,0 +1,4 @@
+(executable
+ (public_name tcp_client_with_retry)
+ (name main)
+ (libraries unix tcp_client_with_retry))
